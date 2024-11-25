@@ -78,7 +78,7 @@ import pyperclip
 
 def main():
     directory = "./"  # Directory to search
-    output_file = "all-pyCat.txt"  # Output file name
+    output_file = "pyCat-all.txt"  # Output file name
     include_files = ["review_for_submit.py"]  # Files to include
 
     # Combine Python files
