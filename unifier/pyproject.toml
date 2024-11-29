@@ -1,0 +1,17 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unifier"
+version = "1.0.0"
+description = "A utility module for appending Python files to a single text file."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { text = "MIT" }
+readme = "README.md"  # Optional
+requires-python = ">=3.6"
+dependencies = []  # Add any dependencies here
+
+[project.scripts]
+unifier = "unifier:append_python_files"
