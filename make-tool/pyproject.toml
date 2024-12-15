@@ -1,0 +1,25 @@
+[build-system]
+requires = [ "setuptools", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotpy-toolkit"
+version = "1.0.4"
+description = "A collection of Python utilities, including pycat, pytransfer, copydot, indexy, and mappy."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [ "paramiko>=2.11.0", "scp>=0.14.0", "pyperclip>=1.8.2",]
+[[project.authors]]
+name = "braydio"
+email = "chaffee.brayden@gmail.com"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+pycat = "dotpy_toolkit.pycat.pycat:main"
+pytransfer = "dotpy_toolkit.pytransfer.pytransfer:main"
+copydot = "dotpy_toolkit.copydot.copydot:main"
+indexy = "dotpy_toolkit.indexy.indexy:main"
+mappy = "dotpy_toolkit.mappy.mappy:main"
+makedot = "dotpy_toolkit.makedot.makedot:main"
