@@ -1,0 +1,17 @@
+# Python artifacts
+*.pyc
+*.pyo
+__pycache__/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+.env/
+
+# User generated
+mappied.txt
