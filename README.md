@@ -11,13 +11,13 @@ The project includes the following tools:
 - **indexy**: Generates an index of functions and sections in a Python file.
 - **mappy**: Creates a directory tree map of a given directory, with options to exclude certain folders.
 - **makedot**: Integrates new tools into the `dotpy-toolkit` package and repackages existing tools with updates.
-- **pyxpress**: Filezilla but cool. Srsly.
+- **pyxpress**: Filezilla python and express shipping. srsly.
 
 ## Installation
 
 To install the package:
 
-### Set up a Virtual Environment in *The Tool Forge*
+### Set up a Virtual Environment in make-tool
 
 1. Create a virtual environment:
    ```bash
@@ -36,9 +36,9 @@ To install the package:
      .venv\Scripts\activate
      ```
 
-3. Install the installer:
+3. Using the installer makedot.py, install makedot.py:
    ```bash
-   copy makedot.py make-dotpy
+   copy makedot.py make-dotpy/makedot.py
    python makedot.py
    ```
    
