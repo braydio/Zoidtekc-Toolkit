@@ -40,8 +40,13 @@ To install the package:
    copy makedot.py make-dotpy
    python makedot.py
    ```
-
-### Running the `makedot.py` Script
+   
+4. Now you can run the command directly to the command line. Neat! New tools can be created too!
+   ```bash
+   copy new-tool.py ./make-tool/make-dotpy/new-tool.py
+   makedot
+   ```
+   Optional Flag `makedot --remake` to remake an existing tool with updates.
 
 ## Tools and Usage
 
@@ -67,7 +72,7 @@ This script integrates new tools, updates entry points in `pyproject.toml`, and 
 #### Example:
 
 ```bash
-python makedot.py
+makedot.py
 ```
 
 ### 2. **pycat**
@@ -77,7 +82,7 @@ Combines multiple Python scripts into a single text file and optionally copies t
 #### Example:
 
 ```bash
-python pycat.py
+pycat.py
 ```
 
 ### 3. **indexy**
@@ -87,7 +92,7 @@ Analyzes a Python script and generates an index of functions grouped by sections
 #### Example:
 
 ```bash
-python indexy.py file.py --json --csv
+indexy.py file.py --json --csv
 ```
 
 ### 4. **mappy**
@@ -97,7 +102,7 @@ Creates a visual directory tree map of a folder, excluding specified directories
 #### Example:
 
 ```bash
-python mappy.py --dir /path/to/dir --exclude __pycache__ .git
+mappy.py --dir /path/to/dir --exclude __pycache__ .git
 ```
 
 ## Project Structure
