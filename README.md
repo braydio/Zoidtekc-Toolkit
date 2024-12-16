@@ -72,7 +72,7 @@ This script integrates new tools, updates entry points in `pyproject.toml`, and 
 #### Example:
 
 ```bash
-makedot.py
+makedot
 ```
 
 ### 2. **pycat**
@@ -82,7 +82,7 @@ Combines multiple Python scripts into a single text file and optionally copies t
 #### Example:
 
 ```bash
-pycat.py
+pycat
 ```
 
 ### 3. **indexy**
@@ -92,7 +92,7 @@ Analyzes a Python script and generates an index of functions grouped by sections
 #### Example:
 
 ```bash
-indexy.py file.py --json --csv
+indexy file.py --json --csv
 ```
 
 ### 4. **mappy**
@@ -102,7 +102,7 @@ Creates a visual directory tree map of a folder, excluding specified directories
 #### Example:
 
 ```bash
-mappy.py --dir /path/to/dir --exclude __pycache__ .git
+mappy --dir /path/to/dir --exclude __pycache__ .git
 ```
 
 ## Project Structure
