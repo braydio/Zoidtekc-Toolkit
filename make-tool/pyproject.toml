@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dotpy-toolkit"
-version = "1.0.4"
+version = "1.0.6"
 description = "A collection of Python utilities, including pycat, pytransfer, copydot, indexy, and mappy."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -23,3 +23,4 @@ copydot = "dotpy_toolkit.copydot.copydot:main"
 indexy = "dotpy_toolkit.indexy.indexy:main"
 mappy = "dotpy_toolkit.mappy.mappy:main"
 makedot = "dotpy_toolkit.makedot.makedot:main"
+pyxpress = "dotpy_toolkit.pyxpress.pyxpress:main"
