@@ -1,27 +1,28 @@
 # dotpy-toolkit
 
-**dotpy-toolkit** is a Python-based utility collection designed to make life easier for developers and system administrators. It contains multiple tools for working with files, directories, and Python scripts, all packaged for ease of use via the command line.
+**dotpy-toolkit** is this collection of Python scripts with cute names and fun features that I made and packaged for use from the command line. These likely exist in some form elsewhere, likely in a more comprehensive and well maintained library - but not these.
 
 ## Overview
 
 The project includes the following tools:
 
-- **pycat**: Combines and extracts Python files into a single text file.
+- **pycat**: Combines and extracts Python files into a single text file. The results are copied to your clipboard.
 - **indexy**: Generates an index of functions and sections in a Python file.
 - **mappy**: Creates a directory tree map of a given directory, with options to exclude certain folders.
-- **makedot**: Integrates new tools into the `dotpy-toolkit` package.
-- **remakedot**: Automates updating command entry points, incrementing version numbers, and rebuilding/reinstalling the package.
-- **pytransfer**: A placeholder for future tools.
+- **makedot**: Integrates new tools into the `dotpy-toolkit` package and repackages existing tools with updates.
+- **pyxpress**: Filezilla but cool. Srsly.
 
 ## Installation
 
 To install the package:
 
-### Setting up a Virtual Environment
+### Set up a Virtual Environment in *The Tool Forge*
 
 1. Create a virtual environment:
    ```bash
+   cd make-tool
    python -m venv .venv
+   pip install -r requirements.txt
    ```
 
 2. Activate the virtual environment:
@@ -34,30 +35,20 @@ To install the package:
      .venv\Scripts\activate
      ```
 
-3. Install the package locally:
+3. Install the installer:
    ```bash
-   pip install .
-   ```
-
-For local development, use:
-   ```bash
-   pip install --force-reinstall .
+   copy makedot.py make-dotpy
+   python makedot.py
    ```
 
 ### Running the `makedot.py` Script
-
-To add and package new tools, run:
-```bash
-python makedot.py
-```
-
-This script integrates new tools, updates entry points in `pyproject.toml`, and rebuilds the package.
 
 ## Tools and Usage
 
 ### 1. **makedot**
 
 Main script for integrating new tools into the toolkit. It automatically creates sub-packages, updates the `pyproject.toml` file, and increments version numbers.
+This script integrates new tools, updates entry points in `pyproject.toml`, and rebuilds the package.
 
 #### How it works:
 
@@ -109,20 +100,10 @@ Creates a visual directory tree map of a folder, excluding specified directories
 python mappy.py --dir /path/to/dir --exclude __pycache__ .git
 ```
 
-### 5. **remakedot**
-
-Automates the process of updating command entry points, incrementing the project version, and rebuilding/reinstalling the package.
-
-#### Example:
-
-```bash
-python remakedot.py
-```
-
 ## Project Structure
 
 ```plaintext
-.
+make-tool
 ├── dist
 │   ├── dotpy_toolkit-1.0.0-py3-none-any.whl
 │   └── dotpy_toolkit-1.0.0.tar.gz
