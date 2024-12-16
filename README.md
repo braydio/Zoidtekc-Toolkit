@@ -1,6 +1,7 @@
 # dotpy-toolkit
 
 **dotpy-toolkit** is this collection of Python scripts with cute names and fun features that I made and packaged for use from the command line. These likely exist in some form elsewhere, likely in a more comprehensive and well maintained library - but not these.
+ - remember to fix the dotpy_toolkit dir name... 
 
 ## Overview
 
