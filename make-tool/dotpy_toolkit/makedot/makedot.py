@@ -100,29 +100,27 @@ def process_tool(tool_name, source_dir, increment_tool_version_flag=True):
 def main():
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Tool integrator for dotpy-toolkit.")
-    parser.add_argument("-r", "--run", help="Specify a tool to update directly.", nargs="?", const=True)
-    parser.add_argument("-sv", "--skip-vers", "--skip-version", help="Skip incrementing all versions.", action="store_true")
-    parser.add_argument("-sm", "--skip-main", help="Skip incrementing the main project version.", action="store_true")
-    parser.add_argument("-st", "--skip-tool", help="Skip incrementing the tool version.", action="store_true")
+    parser.add_argument("-r", "--remake", help="Specify a tool to update directly.", nargs="?", const=True)
+    parser.add_argument("-v", "--version-up", help="Increment version (default: skip)", action="store_true")
     args = parser.parse_args()
 
-    skip_main = args.skip_main or args.skip_vers
-    skip_tool = args.skip_tool or args.skip_vers
+    # Determine behavior based on flags
+    increment_main_version = args.inc_vers
 
-    if args.run:
-        if args.run is True:
+    if args.remake:
+        if args.remake is True:
             # Prompt the user if tool name is not provided
             tool_name = input("Enter the command name to update (e.g., 'mytool'): ").strip()
         else:
-            tool_name = args.run
-        
+            tool_name = args.remake
+
         source_dir = os.path.join(PACKAGE_DIR, tool_name)
         print(f"Processing tool '{tool_name}' from '{source_dir}'...")
         if not os.path.exists(source_dir):
             print(f"Tool '{tool_name}' not found in '{PACKAGE_DIR}'. Exiting.")
             return
 
-        if process_tool(tool_name, source_dir, not skip_tool):
+        if process_tool(tool_name, source_dir, increment_tool_version_flag=increment_main_version):
             print(f"Tool '{tool_name}' processed successfully.")
     else:
         # Default behavior for processing tools in make-dotpy
@@ -138,16 +136,13 @@ def main():
         print(f"Found {len(new_tools)} new tools: {', '.join(new_tools)}")
         for tool_file in new_tools:
             tool_name = os.path.splitext(tool_file)[0]
-            if process_tool(tool_name, NEW_TOOLS_DIR, not skip_tool):
+            if process_tool(tool_name, NEW_TOOLS_DIR, increment_tool_version_flag=increment_main_version):
                 print(f"Tool '{tool_name}' processed successfully.")
 
-    if not skip_main:
+    if increment_main_version:
         increment_version()
 
     # Rebuild the package
     print("Rebuilding and testing the updated package...")
     build_and_test_tool()
     print("Integration complete.")
-
-if __name__ == "__main__":
-    main()

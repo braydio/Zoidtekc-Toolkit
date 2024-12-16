@@ -8,13 +8,13 @@ from pathlib import Path
 
 # Modular Configuration
 class Config:
-    CONFIG_FILE = Path.home() / ".pyxpress_config.json"
+    CONFIG_FILE = Path.home() / ".config/.dotpy-toolkit/.pyxpress_config.json"
 
     def __init__(self):
         self.ip_mappings = {}
         self.base_local_dir = Path.home() / "projects/pyxpress/send"
         self.base_remote_dir = Path.home() / "projects/pyxpress/get"
-        self.default_user = getpass.getuser()  # Default to the current username
+        self.default_user = getpass.getuser()  # Uncomment to default to the current username
         self.user_mappings = {}  # Optional per-host username mappings
         self.load_config()
 
