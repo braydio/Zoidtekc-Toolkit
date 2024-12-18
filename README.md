@@ -12,6 +12,7 @@ The project includes the following tools:
 - **mappy**: Creates a directory tree map of a given directory, with options to exclude certain folders.
 - **makedot**: Integrates new tools into the `dotpy-toolkit` package and repackages existing tools with updates.
 - **pyxpress**: Filezilla python and express shipping. srsly.
+- **preprocess**: Will slightly process leading up to processing.
 
 ## Installation
 
@@ -104,6 +105,14 @@ Creates a visual directory tree map of a folder, excluding specified directories
 
 ```bash
 mappy --dir /path/to/dir --exclude __pycache__ .git
+```
+
+### 5. **preprocess**
+
+Light processing, usually done before intensive processing.
+
+```bash
+preprocess --file /path/to/file.py --output path/outputfile.json
 ```
 
 ## Project Structure
