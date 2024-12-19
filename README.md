@@ -21,29 +21,30 @@ The project includes the following tools:
 
 To install the package:
 
-### Set up a Virtual Environment in make-tool
+### Set up a Virtual Environment in /make-tool/
 
 1. Create a virtual environment:
    ```bash
    cd make-tool
    python -m venv .venv
-   pip install -r requirements.txt
    ```
 
-2. Activate the virtual environment:
+2. Activate the virtual environment & install dependencies:
    - On Linux/macOS:
      ```bash
      source .venv/bin/activate
+     pip install -r requirements.txt
      ```
    - On Windows:
      ```bash
      .venv\Scripts\activate
+     pip install -r requirements.txt
      ```
 
 3. Using the installer makedot.py, install makedot.py:
    ```bash
    copy makedot.py make-dotpy/makedot.py
-   python makedot.py
+   python makedot.py --remake
    ```
    
 4. Now you can run the command directly to the command line. Neat! New tools can be created too!
